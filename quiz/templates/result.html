@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>result</title>
+  </head>
+  <body>
+    <div class="container">
+      {% if nickname %}
+        <h1>Congratulations, {{ nickname }}. Results are below. Thanks for playing</h1>
+      {% else %}
+        <h1>Congratulations, {{ name }}. Results are below. Thanks for playing</h1>
+      {% endif %}
+      <table style="position: absolute; left: 400px; top: 200px; text-align: center;">
+        <tr style ="border: 2px; border-style: solid;">
+          <th>Correct</th>
+          <th style = "margin-left: 100px;">Wrong</th>
+        </tr>
+        <tr style="border: 2px; border-style:solid">
+          <td style = "border: 2px; border-style: solid; width: 200px; height: 50px;">{{ correct }}</td>
+          <td style = "width: 200px;">{{ wrong }}</td>
+        </tr>
+      </table>
+      <a href="{% url 'reload' %}" class = "btn btn-primary" style = "position: relative; top: 230px; left: 450px;">Back to Homepage</a>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    {% if nickname %}
+      <nav class="navbar navbar-light bg-dark" style='background-color: #3a3d3d;'>
+        <span class="navbar-brand mb-0 h1"><em><h4 style="color:white;">Hey {{ nickname }}, Welcome to the question section.Lets Begin!</h4><em></span>
+      </nav>
+    {% else %}
+      <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-brand mb-0 h1"><em><h4 style="color: white;">Hey {{ name }}, Welcome to the question section.Lets Begin!</h4><em></span>
+      </nav>
+    {% endif %}
+    <br>
+    <h1 style = "margin-left: 350px;">{{ question }}</h1>
+    <br>
+    {% for option in options %}
+    <div class="card" style = "margin-left: 350px; width: 600px;">
+      <div class="card-body">
+        <input type="radio" name="loc" value= '{{ option.option }}' id = 'choice{{ forloop.counter }}'>{{ option }}
+    </div>
+  </div>
+  <br>
+    {% endfor %}
+    <br>
+    <div class="buttons" style = "margin-left: 520px;">
+      <a href="#" class = "btn btn-success" id = "answer">Answer</a>
+      <a href="{% url 'quiz' %}" class = "btn btn-dark" method="POST" id = "next">Next</a>
+    </div>
+  </body>
+  <script src="{% static 'Javascript/script_quizquestion.js' %}">
+  </script>
+</html>

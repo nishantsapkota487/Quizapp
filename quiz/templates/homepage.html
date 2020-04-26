@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body class="background" style="background-color:gray;">
+      <nav class = "navbar navbar-expand-lg navbar-dark mx-auto sticky-top" style="background-color:#3a3d3d; height: 50px;">
+        <h4 class="header">QuizApp</h4>
+      </nav>
+      <div class="container" style="background-color:">
+        <div class="container-box">
+          <form class="" action="{% url 'quiz' %}" method="POST"> {% csrf_token %}
+            <em class = "name"><h2>Name</h2></em>
+            <input type="text" name="name" value="" class="firstname" id = "first" style="outline:none;" placeholder="Required">
+            <em class = "nickname"><h2>Nickname</h2></em>
+            <input type="text" name="nickname" value="" class="nicknameform" style="outline:none;" id = "second" placeholder="Optional">
+            <em class = "questionnumber"><h2>Number of questions?</h2></em>
+            <input type="number" name="number" value="" min = "5" max = "10" class="number" style="outline:none;" id="number" placeholder="Required">
+            <input type="Submit" name="" value="Start!" class = "btn btn-success" id = "button">
+          </form>
+          </div>
+          <div class="jumbotron" style="margin-top: 60px; background-color: #86cad1">
+            <h1 class="display-4" style="margin-left: 350px;">Hi, there!</h1>
+            <p class="lead"><strong style="margin-left:130px;">This is a simple QuizApp which allows you to test your knowledge on different fields.</strong></p>
+            <hr class="my-4">
+            <p><h1 style="margin-left:280px;">Behind the Curtains</h1></p>
+            <h2 style="margin-top:60px;">Devloper: Nishant Sapkota</h2>
+            <hr>
+            <h2 style="margin-top:30px;">School: Western Michigan University</h2>
+            <hr>
+            <h2 style="margin-top:30px;">Link to Github: <a href="https://github.com/nishantsapkota487" class="btn btn-dark" target="_blank">Github</a></h2>
+            <hr>
+            <h2 style="margin-top:30px;">Email: <a href="mailto:nishantsapkota487@gmail.com" class="btn btn-success">Email</a></h2>
+          </div>
+          <em><h1 style="margin-left: 240px;">Some of the glimpses that define me</h1></em>
+          <img src="{% static 'images/boudhanath.jpg' %}" alt="" style="margin-left: 240px;">
+          <hr>
+          <img src="{% static 'images/Myself.jpg' %}" alt="" style="margin-left: 370px;">
+          <hr>
+          <img src="{% static 'images/TimesSquare.jpg' %}" alt="" style="margin-left: 400px;" >
+      </div>
+      <br>
+      <div class="container-footer" style="background-color:black;height: 200px;">
+        <h1 style = "margin-left: 290px;color: white;">Copyright.©.Nishant Sapkota.2020.</h1>
+        <h1 style = "margin-left: 290px"><i class="fab fa-creative-commons-pd" style="font-size: 60px;margin-left: 300px;"></i></h1>
+        <h4 style="margin-left:350px;color:white;">QuizApp by Nishant Sapkota is liscened under a</h4>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="position:absolute;left:120px;" target="_blank"><h4>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</h4></a>
+      </div>
+  </body>
+  <script type="text/javascript" src="{% static 'Javascript/script.js' %}">
+  </script>
+</html>

@@ -1,0 +1,86 @@
+.header{
+  font-style: italic;
+  color: white;
+  margin-left: 490px;
+}
+
+.header:hover{
+  font-size: 30px;
+  color: black;
+}
+
+.container-box{
+  border: 2px;
+  border-style: solid;
+  width: 400px;
+  height: 400px;
+  margin-left: 300px;
+  margin-top: 50px;
+  border-radius: 20px;
+  border-color: black;
+}
+
+.firstname{
+  position: relative;
+  top: 15px;
+  left:70px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+  border-width: 2px;
+  height: 40px;
+  width:260px;
+  outline: none;
+}
+
+.name{
+  position: relative;
+  left: 140px;
+}
+
+.nickname{
+  position: relative;
+  top:40px;
+  left: 110px;
+}
+
+.nicknameform{
+  position: relative;
+  left:70px;
+  top: 50px;
+  width: 260px;
+  border-width: 2px;
+  border-radius: 10px;
+  height:40px;
+  border-style: solid;
+  text-align: center;
+}
+
+.questionnumber{
+  position: relative;
+  top: 70px;
+  left: 35px;
+}
+
+.number{
+  position: relative;
+  top: 80px;
+  left: 150px;
+  width: 100px;
+  border-radius: 10px;
+  border-style: solid;
+  text-align: center;
+}
+
+#button{
+  position: relative;
+  top: 130px;
+  width: 150px;
+  left: 22px;
+}
+
+.container-footer{
+  background-color: black;
+  height: 50px;
+
+}
